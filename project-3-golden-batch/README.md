@@ -55,9 +55,3 @@ notebooks/
   demo.ipynb                        # End-to-end demonstration
 ```
 
-## Limitations
-
-- Synthetic data; real manufacturing performance may differ
-- PCA model assumes stable in-control baseline; retraining needed after process changes
-- Contribution plots are statistical, not causal
-- Alerts trigger manual review, not automated disposition
