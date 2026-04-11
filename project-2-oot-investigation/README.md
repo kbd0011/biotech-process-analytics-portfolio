@@ -63,9 +63,3 @@ After running the demo notebook, the following are produced in `artifacts/`:
 - `reports/investigation_*.html` — Investigation memo with event summary, peer comparison table, contributor ranking, caveats, and recommended follow-up checks. Open in any browser.
 - `data/*.csv` — Generated dataset exports (laboratory, process, deviation log).
 
-## Limitations
-
-- Investigation evidence reflects statistical association, not proven causality
-- Low-peer-count cases produce caveats rather than confident conclusions
-- The contributor model uses cross-validated logistic regression; the GBM benchmark is secondary
-- Synthetic data is structurally realistic but does not replicate any specific manufacturing process
