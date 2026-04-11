@@ -23,15 +23,6 @@ Three self-contained projects demonstrating applied manufacturing analytics for 
 └─────────────────────────┘     └──────────────────────────┘     └─────────────────────────────┘
 ```
 
-## Which project to read first
-
-| If you are reviewing for... | Start with |
-|-----------------------------|------------|
-| Process data analyst role | Project 1 (CPV Command Center) |
-| CPV / technical operations | Project 1, then Project 2 |
-| Manufacturing science / MSAT | Project 3, then Project 1 |
-| Biostat / applied modeling | Project 3, then Project 2 |
-| Operations analytics hiring manager | Project 2 (fastest credible demo), then Project 1 |
 
 ## Synthetic vs real data
 
@@ -49,13 +40,6 @@ Three self-contained projects demonstrating applied manufacturing analytics for 
 | 3. Golden Batch Early Warning | 17 | Passing |
 | **Total** | **60** | **All passing** |
 
-## Why this portfolio is relevant
-
-- **KPI ownership**: Project 1 defines, computes, and tracks KPIs with config-driven logic and recurring reporting
-- **CPV / ongoing process verification**: Project 1 applies SPC methods and capability indices aligned with FDA Stage 3 and ICH Q10
-- **OOT/OOS trending**: Projects 1 and 2 detect out-of-trend behavior using rolling z-scores, run rules, and control charts
-- **Investigation support**: Project 2 provides reproducible peer-batch comparison and contributor ranking for deviation meetings
-- **Predictive monitoring**: Project 3 builds multivariate early-warning models with contribution-based explainability
 
 ## Running locally
 
