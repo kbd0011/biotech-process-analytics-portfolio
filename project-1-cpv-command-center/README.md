@@ -59,8 +59,3 @@ notebooks/
   demo.ipynb                    # End-to-end demonstration
 ```
 
-## Limitations
-
-- Synthetic data is structurally realistic but does not replicate any specific manufacturing process
-- Dashboard exports are flat files; no live BI connection is included
-- Capability indices require genuine spec limits and are suppressed where specs are absent
