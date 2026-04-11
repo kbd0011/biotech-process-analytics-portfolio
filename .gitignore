@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+artifacts/
+data/
+.DS_Store
+__MACOSX/
+.ipynb_checkpoints/
+*.swp
+*.swo
+.env
+*.tar.gz

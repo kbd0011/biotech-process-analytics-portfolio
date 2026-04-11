@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Investigation Summary — Lot LOT-0035</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #333; }
+h1 { color: #1a3a5c; border-bottom: 2px solid #1a3a5c; padding-bottom: 8px; }
+h2 { color: #2c5f8a; margin-top: 30px; }
+table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: left; }
+th { background: #f0f4f8; }
+.caveat { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; margin: 15px 0; }
+.evidence { background: #f8f9fa; border-left: 4px solid #28a745; padding: 12px; margin: 15px 0; }
+.footer { margin-top: 40px; font-size: 0.85em; color: #888; border-top: 1px solid #ddd; padding-top: 10px; }
+</style></head>
+<body>
+<h1>Investigation Summary — Lot LOT-0035</h1>
+<p><strong>Generated:</strong> 2026-04-11 04:01</p>
+<p><strong>Response variable:</strong> dissolution</p>
+
+<h2>1. Event Summary</h2>
+<p>Lot <strong>LOT-0035</strong> was flagged as suspect with reason code: <em>OOT-zscore</em> (severity: major).</p>
+<p>Observed dissolution: <strong>77.27</strong> (spec: 75.0–110.0).</p>
+
+<h2>2. Comparison Set</h2>
+<p>78 peer lots matched on: product_code, batch_size_category.</p>
+
+
+<h2>3. Statistical Evidence</h2>
+<div class="evidence">
+<p>Top features with largest standardized differences between the suspect lot and its peer group:</p>
+</div>
+<table border="1" class="dataframe comparison">
+  <thead>
+    <tr style="text-align: right;">
+      <th>feature</th>
+      <th>suspect_value</th>
+      <th>peer_mean</th>
+      <th>peer_std</th>
+      <th>z_diff</th>
+      <th>cohens_d</th>
+      <th>p_value</th>
+      <th>direction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>supplier_SUP_3</td>
+      <td>1.000</td>
+      <td>0.128</td>
+      <td>0.337</td>
+      <td>2.591</td>
+      <td>2.591</td>
+      <td>0.010</td>
+      <td>above</td>
+    </tr>
+    <tr>
+      <td>disintegration</td>
+      <td>9.300</td>
+      <td>15.018</td>
+      <td>3.014</td>
+      <td>-1.897</td>
+      <td>-1.897</td>
+      <td>0.058</td>
+      <td>below</td>
+    </tr>
+    <tr>
+      <td>rm_potency</td>
+      <td>106.640</td>
+      <td>100.750</td>
+      <td>3.428</td>
+      <td>1.718</td>
+      <td>1.718</td>
+      <td>0.086</td>
+      <td>above</td>
+    </tr>
+    <tr>
+      <td>compression_force_kn</td>
+      <td>12.320</td>
+      <td>14.875</td>
+      <td>1.543</td>
+      <td>-1.656</td>
+      <td>-1.656</td>
+      <td>0.098</td>
+      <td>below</td>
+    </tr>
+    <tr>
+      <td>compression_to_weight_ratio</td>
+      <td>0.025</td>
+      <td>0.030</td>
+      <td>0.003</td>
+      <td>-1.572</td>
+      <td>-1.572</td>
+      <td>0.116</td>
+      <td>below</td>
+    </tr>
+    <tr>
+      <td>drying_intensity</td>
+      <td>6327.520</td>
+      <td>7279.141</td>
+      <td>648.761</td>
+      <td>-1.467</td>
+      <td>-1.467</td>
+      <td>0.142</td>
+      <td>below</td>
+    </tr>
+    <tr>
+      <td>content_uniformity_rsd</td>
+      <td>0.770</td>
+      <td>1.965</td>
+      <td>0.825</td>
+      <td>-1.448</td>
+      <td>-1.448</td>
+      <td>0.148</td>
+      <td>below</td>
+    </tr>
+    <tr>
+      <td>drying_temp_c</td>
+      <td>56.800</td>
+      <td>59.653</td>
+      <td>2.006</td>
+      <td>-1.422</td>
+      <td>-1.422</td>
+      <td>0.155</td>
+      <td>below</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>4. Candidate Contributors</h2>
+<p>Features ranked by association strength from the primary interpretable model (logistic regression).</p>
+<table border="1" class="dataframe contributors">
+  <thead>
+    <tr style="text-align: right;">
+      <th>rank</th>
+      <th>feature</th>
+      <th>coefficient</th>
+      <th>interpretation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>supplier_SUP_3</td>
+      <td>0.4660</td>
+      <td>higher values increase suspect risk</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>supplier_SUP_1</td>
+      <td>-0.2679</td>
+      <td>lower values increase suspect risk</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>mix_speed_rpm</td>
+      <td>-0.2629</td>
+      <td>lower values increase suspect risk</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>drying_time_min</td>
+      <td>-0.2616</td>
+      <td>lower values increase suspect risk</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>mix_energy_proxy</td>
+      <td>-0.2369</td>
+      <td>lower values increase suspect risk</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>friability</td>
+      <td>-0.1842</td>
+      <td>lower values increase suspect risk</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>mix_time_min</td>
+      <td>0.1832</td>
+      <td>higher values increase suspect risk</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>rm_potency</td>
+      <td>-0.1768</td>
+      <td>lower values increase suspect risk</td>
+    </tr>
+  </tbody>
+</table>
+<div class="caveat">Contributor ranking reflects statistical association, not proven root cause. Process-level review is required before attributing causality.
+</div>
+
+<h2>5. Recommended Follow-Up</h2>
+<ul>
+
+<li>Review process records for supplier_SUP_3 on lot LOT-0035 and compare to peer range.</li>
+
+<li>Review process records for supplier_SUP_1 on lot LOT-0035 and compare to peer range.</li>
+
+<li>Review process records for mix_speed_rpm on lot LOT-0035 and compare to peer range.</li>
+
+<li>Confirm raw material COA data for the suspect lot against supplier specifications.</li>
+
+<li>Assess whether any equipment or environmental deviations were logged during manufacture.</li>
+
+</ul>
+
+<div class="footer">
+<p>This memo reflects statistical association and is not a determination of root cause.
+Process-level review by qualified personnel is required before attributing causality.
+Generated by the OOT Investigation Workbench.</p>
+</div>
+</body></html>

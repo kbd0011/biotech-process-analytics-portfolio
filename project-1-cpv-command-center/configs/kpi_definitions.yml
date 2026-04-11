@@ -1,0 +1,92 @@
+# KPI definitions for Cell Therapy CPV & KPI Command Center
+# Each KPI includes name, grain, numerator/denominator logic, thresholds, and chart type.
+
+kpis:
+  batch_success_rate:
+    display_name: "Batch Success Rate"
+    grain: "site_month"
+    numerator: "count where disposition == 'released'"
+    denominator: "count where disposition in ('released', 'rejected', 'terminated')"
+    exclusions: "disposition == 'pending'"
+    threshold: 0.85
+    alert_direction: "below"
+    owner: "Quality"
+    chart_type: "p_chart"
+    metric_type: "attribute"
+
+  oos_rate:
+    display_name: "OOS Rate"
+    grain: "site_month"
+    numerator: "count where any release test is OOS"
+    denominator: "count of all completed lots"
+    exclusions: "disposition == 'pending'"
+    threshold: 0.05
+    alert_direction: "above"
+    owner: "Quality"
+    chart_type: "p_chart"
+    metric_type: "attribute"
+
+  termination_rate:
+    display_name: "Termination Rate"
+    grain: "site_month"
+    numerator: "count where disposition == 'terminated'"
+    denominator: "count of all lots started"
+    exclusions: "none"
+    threshold: 0.10
+    alert_direction: "above"
+    owner: "Manufacturing"
+    chart_type: "p_chart"
+    metric_type: "attribute"
+
+  cycle_time_days:
+    display_name: "Cycle Time (days)"
+    grain: "lot"
+    spec_lower: null
+    spec_upper: 21.0
+    target: 14.0
+    threshold_upper: 18.0
+    owner: "Manufacturing"
+    chart_type: "i_mr"
+    metric_type: "continuous"
+
+  harvest_viability:
+    display_name: "Harvest Viability (%)"
+    grain: "lot"
+    spec_lower: 70.0
+    spec_upper: null
+    target: 90.0
+    threshold_lower: 80.0
+    owner: "Process Development"
+    chart_type: "i_mr"
+    metric_type: "continuous"
+
+  transduction_efficiency:
+    display_name: "Transduction Efficiency (%)"
+    grain: "lot"
+    spec_lower: 15.0
+    spec_upper: null
+    target: 40.0
+    threshold_lower: 25.0
+    owner: "Process Development"
+    chart_type: "ewma"
+    metric_type: "continuous"
+
+  deviation_rate:
+    display_name: "Deviation Rate (per lot)"
+    grain: "site_month"
+    numerator: "count of deviations"
+    denominator: "count of lots"
+    exclusions: "none"
+    threshold: 0.20
+    alert_direction: "above"
+    owner: "Quality"
+    chart_type: "p_chart"
+    metric_type: "attribute"
+
+sites:
+  - site_id: "SITE_A"
+    name: "CMO Alpha"
+  - site_id: "SITE_B"
+    name: "CMO Beta"
+
+random_seed: 42

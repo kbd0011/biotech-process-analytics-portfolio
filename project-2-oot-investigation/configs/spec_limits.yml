@@ -1,0 +1,55 @@
+# Specification limits, OOT logic, peer-group rules, and investigation metadata
+# for the OOT Investigation Workbench
+
+response_variables:
+  dissolution:
+    display_name: "Dissolution (%)"
+    lower_spec: 75.0
+    upper_spec: 110.0
+    target: 95.0
+    unit: "%"
+    oot_logic:
+      method: "rolling_zscore"
+      window: 30
+      z_threshold: 2.5
+      run_rule_length: 7
+      run_rule_direction: "one_side"
+    peer_group_keys:
+      - "product_code"
+      - "batch_size_category"
+    severity_levels:
+      oos: "critical"
+      oot_zscore: "major"
+      oot_run: "minor"
+
+peer_matching:
+  min_peer_count: 10
+  low_peer_warning_threshold: 15
+  max_peer_count: 100
+  matching_keys:
+    - "product_code"
+    - "batch_size_category"
+  exclude_suspect: true
+
+investigation_memo:
+  title_template: "Investigation Summary — Lot {lot_id}"
+  sections:
+    - "event_summary"
+    - "comparison_set"
+    - "statistical_evidence"
+    - "candidate_contributors"
+    - "recommended_followup"
+  causality_language:
+    positive: "candidate contributor"
+    suggestive: "suggestive pattern requiring process review"
+    insufficient: "insufficient evidence for attribution"
+  caveat_low_peers: >
+    The peer comparison set contains fewer than {threshold} lots.
+    Statistical power is limited and effect size estimates should be
+    interpreted with caution. Follow-up review recommended.
+  caveat_model: >
+    Contributor ranking reflects statistical association, not proven
+    root cause. Process-level review is required before attributing
+    causality.
+
+random_seed: 42
