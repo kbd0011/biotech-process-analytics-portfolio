@@ -14,3 +14,15 @@ __MACOSX/
 *.swo
 .env
 *.tar.gz
+*.zip
+
+# Sibling repos and scratch dirs checked out under this folder - not part of this repo
+gxp/
+gxp_repo/
+gxp_repo_v1.1_snapshot/
+bayesian-adaptive-trial-sim/
+cdisc-pilot-replication/
+mock-edc-rbm-dashboard/
+projects/
+schedule/
+scheduling/

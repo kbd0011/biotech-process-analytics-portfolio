@@ -29,7 +29,7 @@ Three self-contained projects demonstrating applied manufacturing analytics for 
 - **Project 2** uses a publicly available 1,005-batch pharmaceutical manufacturing dataset as its primary data source. When the public files are not locally available, a structurally equivalent synthetic dataset is generated with the same schema and variable relationships.
 - **Projects 1 and 3** use literature-derived synthetic data inspired by published CAR-T CPP/CQA ranges and release-testing concepts.
 - No project implies access to proprietary GMP or commercial manufacturing systems.
-- Credibility comes from realistic data models, operationally appropriate control logic, and reproducible reporting workflows — not from data access.
+- Credibility comes from realistic data models, operationally appropriate control logic, and reproducible reporting workflows - not from data access.
 
 ## Test summary
 
